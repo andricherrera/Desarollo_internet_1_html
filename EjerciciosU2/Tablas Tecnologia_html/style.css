@@ -1,0 +1,16 @@
+
+table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+th, td {
+			padding: 8px;
+			text-align: left;
+			border: 5px solid rgb(0, 0, 0);
+		}
+
+th {
+			background-color: rgb(141, 141, 141);
+			color: white;
+		}
