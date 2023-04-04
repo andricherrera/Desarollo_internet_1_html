@@ -1,0 +1,11 @@
+
+    #lista ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        color: green;
+      }
+    
+
+    #lista li {
+        color: green;
+      }
