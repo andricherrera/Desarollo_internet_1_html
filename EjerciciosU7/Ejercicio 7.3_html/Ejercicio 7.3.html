@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi formulario</title>
+        <script>
+            function validarFormulario() {
+                let nombre = document.forms["miFormulario"]["nombre"].value;
+                let email = document.forms["miFormulario"]["email"].value;
+                let mensaje = document.forms["miFormulario"]["mensaje"].value;
+
+                if (nombre == "" || email == "" || mensaje == "") {
+                    alert("Por favor, rellene todos los campos requeridos.");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="miFormulario" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

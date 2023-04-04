@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suma de dos números</title>
+    <script>
+      function sumar(a, b) {
+        return a + b;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>SUMA</h1>
+    <p>Ingrese dos números para sumar:</p>
+    <input type="text" id="numero1">
+    <input type="text" id="numero2">
+    <button onclick="mostrarResultado()">Sumar</button>
+    <p id="resultado"></p>
+    <script>
+      function mostrarResultado() {
+        let num1 = parseFloat(document.getElementById("numero1").value);
+        let num2 = parseFloat(document.getElementById("numero2").value);
+        let resultado = sumar(num1, num2);
+        document.getElementById("resultado").textContent = `El resultado de la suma es ${resultado}`;
+      }
+    </script>
+  </body>
+</html>
