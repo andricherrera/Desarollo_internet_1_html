@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objeto Persona</title>
+</head>
+<body>
+	<script>
+	
+		class Persona {
+			constructor(nombre, edad, correoElectronico) {
+				this.nombre = nombre;
+				this.edad = edad;
+				this.correoElectronico = correoElectronico;
+			}
+		}
+
+        const persona1 = new Persona("Andric Giovanni Leon Herrera", 20, "Andric09@outlook.com");
+
+		document.write(`Nombre: ${persona1.nombre}<br>`);
+		document.write(`Edad: ${persona1.edad}<br>`);
+		document.write(`Correo electrónico: ${persona1.correoElectronico}<br>`);
+	</script>
+</body>
+</html>

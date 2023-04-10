@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objeto Mascota</title>
+</head>
+<body>
+	<script>
+	
+		class Mascota {
+			constructor(nombre, edad, tipoAnimal) {
+				this.nombre = nombre;
+				this.edad = edad;
+				this.tipoAnimal = tipoAnimal;
+			}
+		}
+
+		const mascota1 = new Mascota("Roky", 2, "Perro");
+
+		document.write(`Nombre: ${mascota1.nombre}<br>`);
+		document.write(`Edad: ${mascota1.edad}<br>`);
+		document.write(`Tipo de animal: ${mascota1.tipoAnimal}<br>`);
+	</script>
+</body>
+</html>

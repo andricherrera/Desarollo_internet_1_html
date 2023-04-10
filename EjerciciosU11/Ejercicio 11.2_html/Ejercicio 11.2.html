@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>contraseña</title>
+</head>
+<body>
+    <form id="cambio-contrasena-form" method="post">
+        <label for="contrasena-actual">Contraseña actual:</label>
+        <input type="password" id="contrasena-actual" name="contrasena-actual">
+        <label for="nueva-contrasena">Nueva contraseña:</label>
+        <input type="password" id="nueva-contrasena" name="nueva-contrasena" oninput="validarContrasena()">
+        <label for="confirmar-contrasena">Confirmar nueva contraseña:</label>
+        <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" oninput="validarContrasena()">
+        <button type="submit">Cambiar contraseña</button>
+      </form>
+      
+      <script>
+        function validarContrasena() {
+          var contrasenaInput = document.getElementById("nueva-contrasena");
+          var contrasena = contrasenaInput.value;
+          
+          if (contrasena.length < 8) {
+            contrasenaInput.setCustomValidity("La contraseña debe tener al menos 8 caracteres.");
+          } else {
+            contrasenaInput.setCustomValidity("");
+          }
+          
+          var confirmarContrasenaInput = document.getElementById("confirmar-contrasena");
+          if (confirmarContrasenaInput.value != contrasena) {
+            confirmarContrasenaInput.setCustomValidity("Las contraseñas no coinciden.");
+          } else {
+            confirmarContrasenaInput.setCustomValidity("");
+          }
+        }
+      </script>
+      
+</body>
+</html>

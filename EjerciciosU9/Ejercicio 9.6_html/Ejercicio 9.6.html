@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ordenar un arreglo alfabéticamente</title>
+   
+     <script>
+        function ordenarNombres() {
+          var nombresInput = document.getElementById("nombres");
+          var nombres = nombresInput.value.split(", ");
+          
+          nombres.sort();
+          
+          var listaOrdenada = document.getElementById("listaOrdenada");
+          listaOrdenada.innerHTML = "";
+          for (var i = 0; i < nombres.length; i++) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(nombres[i]));
+            listaOrdenada.appendChild(li);
+          }
+        }
+      </script>
+
+</head>
+  <body>
+    <h1>Ordenar un arreglo alfabéticamente</h1>
+    <form>
+      <label for="nombres">Nombres:</label>
+      <input type="text" id="nombres" name="nombres" value="Ana, Juan, María, Pedro, Luis">
+      <input type="button" value="Ordenar" onclick="ordenarNombres()">
+    </form>
+    <p>Después de ordenar:</p>
+    <ul id="listaOrdenada"></ul>
+    
+  </body>
+</html>

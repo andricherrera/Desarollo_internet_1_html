@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<label for="fecha-nacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+    <button type="button" onclick="validarEdad()">Validar edad</button>
+    
+    <script>
+      function validarEdad() {
+        var fechaNacimientoInput = document.getElementById("fecha-nacimiento");
+        var fechaNacimiento = new Date(fechaNacimientoInput.value);
+        var hoy = new Date();
+        var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+        var mes = hoy.getMonth() - fechaNacimiento.getMonth();
+        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+            edad--;
+        }
+        
+        var edadMinima = 18;
+        
+        if (edad >= edadMinima) {
+          alert("El usuario es mayor de edad.");
+        } else {
+          alert("El usuario es menor de edad.");
+        }
+      }
+    </script>
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

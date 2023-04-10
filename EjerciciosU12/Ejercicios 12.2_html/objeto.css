@@ -1,0 +1,7 @@
+#objeto {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(208, 255, 0);
+    transition: transform 0.5s ease-in-out;
+  }
+  

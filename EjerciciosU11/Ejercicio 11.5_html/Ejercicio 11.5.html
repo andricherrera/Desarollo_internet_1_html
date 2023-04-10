@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Checkbox</title>
+</head>
+<body>
+    <input type="checkbox" id="opcion1" name="opciones[]" value="opcion1">
+<label for="opcion1">Opción 1</label>
+<input type="checkbox" id="opcion2" name="opciones[]" value="opcion2">
+<label for="opcion2">Opción 2</label>
+<input type="checkbox" id="opcion3" name="opciones[]" value="opcion3">
+<label for="opcion3">Opción 3</label>
+<button type="button" onclick="validarOpciones()">Validar opciones</button>
+
+<script>
+  function validarOpciones() {
+    var opcionesInputs = document.getElementsByName("opciones[]");
+    var seleccionado = false;
+    
+    for (var i = 0; i < opcionesInputs.length; i++) {
+      if (opcionesInputs[i].checked) {
+        seleccionado = true;
+        break;
+      }
+    }
+    
+    if (seleccionado) {
+      alert("Mas de una o una opcion Seleccionada.");
+    } else {
+      alert("Seleccione una opción.");
+    }
+  }
+</script>
+
+</body>
+</html>

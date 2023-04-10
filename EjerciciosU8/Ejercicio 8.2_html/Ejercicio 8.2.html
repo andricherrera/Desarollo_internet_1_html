@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadena de caracteres </title>
+
+    <script>
+		function mostrarNombreCompleto() {
+			
+			const nombre = document.getElementById("nombre").value;
+			const apellido1 = document.getElementById("apellido1").value;
+			const apellido2 = document.getElementById("apellido2").value;
+
+			const nombreCompleto = nombre + " " + apellido1 + " " + apellido2;
+			
+			document.write(`Nombre completo: ${nombreCompleto}`);
+		}
+	</script>
+
+</head>
+<body>
+	<form>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre"><br>
+
+		<label for="apellido1">Apellido paterno:</label>
+		<input type="text" id="apellido1" name="apellido1"><br>
+
+		<label for="apellido2">Apellido materno:</label>
+		<input type="text" id="apellido2" name="apellido2"><br>
+
+		<button type="button" onclick="mostrarNombreCompleto()">Mostrar nombre completo</button>
+	</form>
+
+</body>
+</html>
